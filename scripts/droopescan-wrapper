@@ -1,0 +1,4 @@
+#!/bin/sh
+
+
+./droopescan "$@" > /boot/droopescan.log 2>&1

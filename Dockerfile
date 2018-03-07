@@ -4,7 +4,12 @@ RUN apt-get update
 RUN apt-get install -y git
 
 RUN git clone https://github.com/droope/droopescan.git
+
 WORKDIR ./droopescan
+
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["./droopescan"]
+ADD ./scripts/droopescan-wrapper .
+RUN chmod +x ./droopescan-wrapper
+
+ENTRYPOINT ["./droopescan-wrapper"]
