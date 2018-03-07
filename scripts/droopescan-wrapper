@@ -2,3 +2,15 @@
 
 
 ./droopescan "$@" > /boot/droopescan.log 2>&1
+
+echo
+echo "==================================="
+echo "== droopescan execution finished =="
+echo "==================================="
+echo
+
+cat /boot/droopescan.log
+
+echo
+echo "==================================="
+echo
